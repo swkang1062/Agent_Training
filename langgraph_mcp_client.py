@@ -19,7 +19,7 @@ model_with_tools = None
 #%%
 import os
 
-GEMINI_API_KEY = "AIzaSyD-lNX0a6lEHYxnhPoPClW3DU2SMrbIU-I"
+GEMINI_API_KEY = "AIzaSyBkGZrOfFB4I2V0cH1XMKP5Iaax9knvhXA"
 
 #%%
 
@@ -186,3 +186,4 @@ async def main():
 if __name__ == "__main__":
     # 비동기 함수인 main()을 실행합니다.
     asyncio.run(main())
+
