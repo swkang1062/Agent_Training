@@ -85,7 +85,7 @@ async def main():
 
     # 2. Initialize the Language Model
     global model_with_tools
-    model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GEMINI_API_KEY)
+    model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GEMINI_API_KEY)
     print("🤖 Google Gemini client initialized.")
 
     # 3. Initialize the MCP Client to connect to the tool server
@@ -186,4 +186,5 @@ async def main():
 if __name__ == "__main__":
     # 비동기 함수인 main()을 실행합니다.
     asyncio.run(main())
+
 
