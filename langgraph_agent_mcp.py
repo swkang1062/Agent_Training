@@ -107,7 +107,7 @@ tools = [get_specific_date, verify_location, search_weather]
 tool_node = ToolNode(tools)
 
 # 사용할 모델 정의 및 도구 바인딩
-model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0, api_key=GEMINI_API_KEY)
+model = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0, api_key=GEMINI_API_KEY)
 model = model.bind_tools(tools)
 
 # 노드(Node) 및 엣지(Edge) 정의
@@ -165,8 +165,8 @@ if __name__ == "__main__":
     import time
     time.sleep(2)
     
-    os.environ["GEMINI_API_KEY"] = "AIzaSyD-lNX0a6lEHYxnhPoPClW3DU2SMrbIU-I"
-    os.environ["TAVILY_API_KEY"] = "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"
+    os.environ["GEMINI_API_KEY"] = "Your GEMINI API Key"
+    os.environ["TAVILY_API_KEY"] = "Your Tavily API Key"
     
     
     print("\n🤖 제주도 사투리 날씨 에이전트 '날씨봇'이라꽈. 무신거 물어보쿠광? (종료: 'quit')")
@@ -177,5 +177,6 @@ if __name__ == "__main__":
         if not user_input:
             continue
         run_agent(user_input)
+
 
 # 루프가 끝나면 atexit에 등록된 cleanup 함수가 자동으로 호출됩니다.
