@@ -45,7 +45,7 @@ class MCP_ChatBot:
         
         # ⭐️ Gemini 모델을 설정합니다. (향후 gemini-2.5-flash로 변경 가능)
         self.model = ChatGoogleGenerativeAI(
-            model="gemini-2.5-pro",
+            model="gemini-2.5-flash",
             google_api_key=google_api_key
         )
         
@@ -203,4 +203,5 @@ if __name__ == "__main__":
 
 
     
+
 #%%
