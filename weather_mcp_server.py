@@ -27,8 +27,8 @@ from tavily import TavilyClient
 from fastmcp import FastMCP
 
 
-os.environ["GEMINI_API_KEY"] = "AIzaSyD-lNX0a6lEHYxnhPoPClW3DU2SMrbIU-I"
-os.environ["TAVILY_API_KEY"] = "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"
+os.environ["GEMINI_API_KEY"] = "AIzaSyBkGZrOfFB4I2V0cH1XMKP5Iaax9knvhXA"
+os.environ["TAVILY_API_KEY"] = "Your Tavily API Key"
 # API 키 설정 (환경변수에서 가져오기)
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
@@ -297,4 +297,5 @@ if __name__ == "__main__":
         transport="streamable-http",  # Streamable HTTP 지정
         path="/mcp",                  # 엔드포인트 경로
         port=8080                     # 포트 번호
+
         )
