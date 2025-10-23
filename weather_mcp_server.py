@@ -99,7 +99,7 @@ def get_specific_date(date_description: str) -> str:
 
         # Gemini를 사용한 복잡한 날짜 파싱
         if GEMINI_API_KEY:
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
 
             prompt = f"""
             오늘은 {current_date} ({current_weekday})입니다.
@@ -150,7 +150,7 @@ def verify_location(location_name: str) -> str:
             return json.dumps(error_info, ensure_ascii=False)
 
         # gemini-1.5-flash 모델을 사용합니다.
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
 
         prompt = f"""
         당신은 지리 정보 전문가입니다. 다음 지역명을 분석하여 표준화된 도시/지역 이름과 국가를 JSON 형식으로 반환해주세요.
@@ -299,3 +299,4 @@ if __name__ == "__main__":
         port=8080                     # 포트 번호
 
         )
+
